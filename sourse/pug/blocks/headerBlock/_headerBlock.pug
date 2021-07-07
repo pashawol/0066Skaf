@@ -2,9 +2,50 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+			+e.row.row
+				.col-lg-6
+					+e.slider-wrap
+						.swiper-container.headerBlock-slider-js
+							.swiper-wrapper
+								+headerBlockSlide()
+								+headerBlockSlide()
+								+headerBlockSlide()
+								+headerBlockSlide()
+							//-+arrow()
+							.swiper-pagination
+					+e.video
+						span Смотрите видео от нашего эксперта какие у нас есть шкафы и как мы работаем.
+						+e.play(href='#')
+							img(loading="lazy" src='img/svg/yellow-play.svg' alt="")
+				.col-lg-6
+					+e.blue
+						span Подберите свой идеальный
+						br
+						span.text-warning шкаф-купе
+						br
+						span по цене производства
+					+e.delivery
+						| с доставкой от 3-х дней
+						br
+						| и рассрочкой 0%
+					+e.any В наличии на складе шкафы и шкафы-купе любых размеров!
+					+e.v-row.row
+						+headerBlockVantage('img/svg/headerBlock-item-1.svg', 'Эксперты с опытом более 12 лет')
+						+headerBlockVantage('img/svg/headerBlock-item-2.svg', 'Самая дешевая доставка и сборка шкафов')
+						+headerBlockVantage('img/@2x/headerBlock-item-3.png', 'Официальная гарантия на шкаф 5 лет')
+					+e.advise-btn(href="#") Получите советы от эксперта по выбору шкафа прямо сейчас
 	// end headerBlock
+
+mixin headerBlockVantage(imgPass, txt)
+	.col-4
+		+e.v-sub-row.row
+			.col-auto
+				+e.ball
+					img(loading="lazy" src=imgPass alt="")
+			.col
+				+e.v-txt=txt
+
+mixin headerBlockSlide()
+	.swiper-slide
+		+e.img-link(href=`img/@2x/headerBlock-img-1.jpg` data-fancybox="headerBlockGalery")
+			img(loading="lazy" src=`img/@2x/headerBlock-img-1.jpg` alt="")

@@ -1,61 +1,94 @@
 .top-nav {
-	position: sticky; 
-	left: 0;
-	// left: 200px;
-	// right: -200px;
-	// margin-right: -200px;
-	top: 0;
-	left: 0;
-	z-index: 800;
-	background-color: #fff;
-	border-bottom: 1px solid #000; 
-	--color-link: 255,
-	0,
-	0;
-	background-color: #{rgba(var(--color-link), .5)};
-	&.fixed { 
-		bottom: auto;
-		margin-top: 0;
+	border-bottom: 1px solid $light-blue;
+
+	padding: rem(16) 0;
+	@include media-breakpoint-up(lg){
+		padding: rem(30) 0 rem(20);
 	}
-	.row{
-	 
+	@include media-breakpoint-up(xl){
+		padding: rem(42) 0 rem(26);
 	}
 
-	// 
-	@include media-breakpoint-up(xl) {}
+	&__main-row{
+		--bs-gutter-x: #{rem(10)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(15)};
+		}
+		--bs-gutter-y: #{rem(20)};
+	}
+	&__logo-col{
+		@include media-breakpoint-up(xl){
+			position: relative;
+			top: 10px;
+		}
+	}
+	&__logo{
+		display: block;
+		width: rem(288);
+		max-width: 100%;
 
-	@include media-breakpoint-up(lg) {}
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+		}
+		margin-bottom: rem(3);
 
-	@include media-breakpoint-up(md) {}
+	}
+	&__txt{
+		color: $light-blue;
+		font-size: rem(17);
+		line-height: 1.2;
+	}
+	&__tel{
+		display: block;
+		text-decoration: none;
 
-	@include media-breakpoint-up(sm) {}
+		color: $body-color;
+		&:hover{
+			color: $primary;
+		}
 
-	@include media-breakpoint-up(xs) {}
+		font-size: rem(20);
+		@include media-breakpoint-up(sm){
+			font-size: rem(24);
+		}
+		@include media-breakpoint-up(xl){
+			font-size: rem(33);
+		}
+		font-weight: 700;
+		line-height: (51.48/33);
+	}
+	&__soc-row{
+		--bs-gutter-x: #{rem(5)};
+		--bs-gutter-y: #{rem(5)};
+	}
+	&__soc{
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-	// 
-	@include media-breakpoint-between(md, xl) {}
+		width: rem(27);
+		height: rem(27);
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__btn{
+		@extend .btn-yellow;
+		position: relative;
+		top: -1.5px;
 
-	// 
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
-
-	// 
-	@include media-breakpoint-down(xl) {}
-
-	@include media-breakpoint-down(lg) {}
-
-	@include media-breakpoint-down(md) {}
-
-	@include media-breakpoint-down(sm) {}
-
-	@include media-breakpoint-down(xs) {}
+		min-width: 0;
+		@include media-breakpoint-up(xl){
+			min-width: rem(181);
+		}
+	}
+	&__{}
+	&__{}
 }
 
 

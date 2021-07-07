@@ -1,4 +1,3 @@
-1. Отключил lazy плагин. Поставил  loading="lazy"
+<!-- https://github.com/luckyone1221/0066Skaf -->
 
-
-rm -rf node_modules
+1.<https://luckyone1221.github.io/0066Skaf/public/index.html>

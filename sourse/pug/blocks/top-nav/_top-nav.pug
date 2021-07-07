@@ -1,28 +1,33 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 			+mnu()
 	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
-				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js
-						span
-				.col.d-none.d-lg-block
-					+mnu()
-					
+			+e.main-row.row.align-items-center
+				+e.logo-col.col-lg
+					+e.logo
+						img(loading="lazy" src="img/@2x/logo.png" alt="")
+					+e.txt Продажа корпусных шкафов и шкафов-купе
+				.col.col-lg-auto
+					+e.tel(href='tel:88007753016') 8 800 775-30-16
+				.col-auto
+					+e.soc-row.row
+						.col-auto
+							+topNavSoc('wa')
+						.col-auto
+							+topNavSoc('tg')
+				.col-auto
+					+e.btn(href='#') Перезвоните мне
 	// end top-nav
+
+mixin topNavSoc(iconName)
+	.col-auto
+		+e.soc(href="#")
+			img(loading="lazy" src=`img/@2x/${iconName}.png` alt='')

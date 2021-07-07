@@ -340,6 +340,21 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+	//
+
+	let headerBlockSlider = new Swiper('.headerBlock-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	});
 }
 
 ;

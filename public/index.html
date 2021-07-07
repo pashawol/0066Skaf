@@ -45,7 +45,7 @@
 			<div class="headerBlock section" id="headerBlock">
 				<div class="container">
 					<div class="headerBlock__row row">
-						<div class="col-lg-6">
+						<div class="headerBlock__left-col col-lg-6">
 							<div class="headerBlock__slider-wrap">
 								<div class="swiper-container headerBlock-slider-js">
 									<div class="swiper-wrapper">
@@ -58,27 +58,37 @@
 										<div class="swiper-slide"><a class="headerBlock__img-link" href="img/@2x/headerBlock-img-1.jpg" data-fancybox="headerBlockGalery"><img loading="lazy" src="img/@2x/headerBlock-img-1.jpg" alt=""/></a>
 										</div>
 									</div>
+									<div class="swiper-prev">
+										<svg class="icon icon-arrow-circle-l ">
+											<use xlink:href="img/svg/sprite.svg#arrow-circle-l"></use>
+										</svg>
+									</div>
+									<div class="swiper-next">
+										<svg class="icon icon-arrow-circle-r ">
+											<use xlink:href="img/svg/sprite.svg#arrow-circle-r"></use>
+										</svg>
+									</div>
 									<div class="swiper-pagination"></div>
 								</div>
 							</div>
-							<div class="headerBlock__video"><span>Смотрите видео от нашего эксперта какие у нас есть шкафы и как мы работаем.</span><a class="headerBlock__play" href="#"><img loading="lazy" src="img/svg/yellow-play.svg" alt=""/></a>
+							<div class="headerBlock__video"><span>Смотрите видео от нашего эксперта какие у нас есть шкафы и как мы работаем.</span><a class="headerBlock__play" href="https://www.youtube.com/watch?v=en6gms6e54Q&amp;list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video"><img loading="lazy" src="img/svg/yellow-play.svg" alt=""/></a>
 							</div>
 						</div>
-						<div class="col-lg-6">
-							<div class="headerBlock__blue"><span>Подберите свой идеальный</span><br/><span class="text-warning">шкаф-купе</span><br/><span>по цене производства</span>
+						<div class="col-lg-6 col-xl">
+							<div class="headerBlock__blue"><span>Подберите свой идеальный</span><br/><span class="headerBlock__big">шкаф-купе</span><span>по цене производства</span>
 							</div>
-							<div class="headerBlock__delivery">с доставкой от 3-х дней<br/>и рассрочкой 0%
+							<div class="headerBlock__delivery">с доставкой от 3-х дней и рассрочкой 0%
 							</div>
 							<div class="headerBlock__any">В наличии на складе шкафы и шкафы-купе любых размеров!
 							</div>
 							<div class="headerBlock__v-row row">
 								<div class="col-4">
 									<div class="headerBlock__v-sub-row row">
-										<div class="col-auto">
+										<div class="col-auto col-lg-12 col-xl-auto">
 											<div class="headerBlock__ball"><img loading="lazy" src="img/svg/headerBlock-item-1.svg" alt=""/>
 											</div>
 										</div>
-										<div class="col">
+										<div class="col col-lg-12 col-xl">
 											<div class="headerBlock__v-txt">Эксперты с опытом более 12 лет
 											</div>
 										</div>
@@ -86,11 +96,11 @@
 								</div>
 								<div class="col-4">
 									<div class="headerBlock__v-sub-row row">
-										<div class="col-auto">
+										<div class="col-auto col-lg-12 col-xl-auto">
 											<div class="headerBlock__ball"><img loading="lazy" src="img/svg/headerBlock-item-2.svg" alt=""/>
 											</div>
 										</div>
-										<div class="col">
+										<div class="col col-lg-12 col-xl">
 											<div class="headerBlock__v-txt">Самая дешевая доставка и сборка шкафов
 											</div>
 										</div>
@@ -98,22 +108,95 @@
 								</div>
 								<div class="col-4">
 									<div class="headerBlock__v-sub-row row">
-										<div class="col-auto">
+										<div class="col-auto col-lg-12 col-xl-auto">
 											<div class="headerBlock__ball"><img loading="lazy" src="img/@2x/headerBlock-item-3.png" alt=""/>
 											</div>
 										</div>
-										<div class="col">
+										<div class="col col-lg-12 col-xl">
 											<div class="headerBlock__v-txt">Официальная гарантия на шкаф 5 лет
 											</div>
 										</div>
 									</div>
 								</div>
-							</div><a class="headerBlock__advise-btn" href="#">Получите советы от эксперта по выбору шкафа прямо сейчас</a>
+							</div>
+							<div class="text-center text-lg-start"><a class="headerBlock__advise-btn" href="#">Получите советы от эксперта по выбору шкафа прямо сейчас</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- end headerBlock-->
+			<!-- start sQuiz-->
+			<section class="sQuiz section" id="sQuiz">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>Квиз, калькулятор</h2>
+					</div>
+					<div class="sQuiz__box">
+					</div>
+				</div>
+			</section>
+			<!-- end sQuiz-->
+			<!-- start sCatalog-->
+			<section class="sCatalog sCatalog--js section" id="sCatalog">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>Каталог продукции</h2>
+						<p>Виды шкафов</p>
+					</div>
+					<div class="sCatalog__slider-wrap">
+						<div class="swiper-container sCatalog-slider-js">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="sCatalog__item"><a class="sCatalog__img" href="#"><img loading="lazy" src="img/@2x/sCatalog-1.jpg" alt=""/></a>
+										<div class="sCatalog__title">Шкаф-купе
+										</div>
+										<div class="sCatalog__btn-cont"><a class="sCatalog__btn" href="#">Узнать подробнее</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sCatalog__item"><a class="sCatalog__img" href="#"><img loading="lazy" src="img/@2x/sCatalog-2.jpg" alt=""/></a>
+										<div class="sCatalog__title">Распашной шкаф
+										</div>
+										<div class="sCatalog__btn-cont"><a class="sCatalog__btn" href="#">Узнать подробнее</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sCatalog__item"><a class="sCatalog__img" href="#"><img loading="lazy" src="img/@2x/sCatalog-3.jpg" alt=""/></a>
+										<div class="sCatalog__title">Угловой шкаф
+										</div>
+										<div class="sCatalog__btn-cont"><a class="sCatalog__btn" href="#">Узнать подробнее</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sCatalog__item"><a class="sCatalog__img" href="#"><img loading="lazy" src="img/@2x/sCatalog-4.jpg" alt=""/></a>
+										<div class="sCatalog__title">Шкаф по индивидуальным <br> размерам
+										</div>
+										<div class="sCatalog__btn-cont"><a class="sCatalog__btn" href="#">Узнать подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="d-none d-md-block">
+							<div class="swiper-prev">
+								<svg class="icon icon-arrow-circle-l ">
+									<use xlink:href="img/svg/sprite.svg#arrow-circle-l"></use>
+								</svg>
+							</div>
+							<div class="swiper-next">
+								<svg class="icon icon-arrow-circle-r ">
+									<use xlink:href="img/svg/sprite.svg#arrow-circle-r"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sCatalog-->
 			<!--+soc()-->
 			<!--a(href="#modal-call").link-modal-js фывфывфыв-->
 			<!--//- img(src="img/", alt="")-->

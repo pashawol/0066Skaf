@@ -1,0 +1,155 @@
+// start .sCatalog
+.sCatalog {
+	overflow: hidden;
+
+	--sPT: #{rem(32)};
+	--sPB: #{rem(50)};
+	--sTPB: #{rem(46)};
+
+	.section-title{
+		h2{
+			margin-bottom: rem(15);
+		}
+		p{
+			color: $body-color;
+			font-size: rem(25);
+		}
+	}
+	&__slider-wrap{
+		position: relative;
+
+		//
+		.swiper-prev,
+		.swiper-next{
+			position: absolute;
+			z-index: 10;
+			top: 50%;
+			transform: translateY(-50%);
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:hover{
+				.icon{
+					color: $black;
+				}
+			}
+			.icon{
+				@include mt();
+				font-size: rem(27);
+				color: $light-blue2;
+			}
+		}
+
+		.swiper-prev{
+			left: calc(#{rem(-27) + rem(-15)});
+		}
+		.swiper-next{
+			right: calc(#{rem(-27) + rem(-15)});
+		}
+		//
+
+		.swiper-container{
+			overflow: visible!important;
+			@include media-breakpoint-up(md){
+				overflow: hidden!important;
+				padding: rem(50);
+				margin: rem(-50);
+			}
+
+
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+			width: 300px;
+			@include media-breakpoint-up(sm){
+				width: calc(100% / 2);
+			}
+			margin: 0 10px;
+			@include media-breakpoint-up(md){
+				width: calc(100% / 3);
+				margin: 0;
+			}
+			@include media-breakpoint-up(lg){
+				width: 25%;
+			}
+			height: auto;
+
+			@include mt();
+
+			@include media-breakpoint-up(md){
+				opacity: 0;
+				pointer-events: none;
+			}
+			//1
+			&.swiper-slide-active{
+				pointer-events: auto;
+				opacity: 1;
+			}
+			//2
+			&.swiper-slide-active + .swiper-slide{
+				opacity: 1;
+				pointer-events: auto;
+			}
+			//3
+			@include media-breakpoint-up(md){
+				&.swiper-slide-active + .swiper-slide + .swiper-slide{
+					pointer-events: auto;
+					opacity: 1;
+				}
+			}
+			//4
+			@include media-breakpoint-up(lg){
+				&.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide{
+					pointer-events: auto;
+					opacity: 1;
+				}
+			}
+		}
+
+		//
+	}
+	&__item{
+		box-shadow: 0 rem(12) rem(30) rem(10) rgba(227, 239, 247, 0.75);
+		background-color: $white;
+		border-radius: rem(25);
+
+		padding: rem(20) rem(25) rem(20) rem(20);
+
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	&__img{
+		@extend .accept-ratio-frame;
+
+		padding-top: (266/255) * 100%;
+		margin-bottom: rem(25);
+	}
+	&__title{
+		width: 100%;
+		text-align: center;
+		display: block;
+		color: $body-color;
+		font-weight: 700;
+
+		margin-bottom: rem(20);
+	}
+	&__btn-cont{
+		width: 100%;
+		text-align: center;
+		margin-top: auto;
+	}
+	&__btn{
+		margin-top: auto;
+		@extend .btn-yellow;
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sCatalog

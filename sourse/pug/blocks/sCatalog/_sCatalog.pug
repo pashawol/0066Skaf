@@ -1,0 +1,26 @@
+mixin sCatalog(data)
+	// start sCatalog
+	+b.SECTION.sCatalog--js.section#sCatalog&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Каталог продукции
+				p Виды шкафов
+			+e.slider-wrap
+				.swiper-container.sCatalog-slider-js
+					.swiper-wrapper
+						+sCatalogSlide(1, `Шкаф-купе`)
+						+sCatalogSlide(2, `Распашной шкаф`)
+						+sCatalogSlide(3, `Угловой шкаф`)
+						+sCatalogSlide(4, `Шкаф по индивидуальным <br> размерам`)
+				.d-none.d-md-block
+					+arrow()
+	// end sCatalog
+
+mixin sCatalogSlide(imgNum, title)
+	.swiper-slide
+		+e.item
+			+e.img(href='#')
+				img(loading="lazy" src=`img/@2x/sCatalog-${imgNum}.jpg` alt="")
+			+e.title!=title
+			+e.btn-cont
+				+e.btn(href="#") Узнать подробнее

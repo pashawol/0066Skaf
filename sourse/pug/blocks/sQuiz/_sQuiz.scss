@@ -1,0 +1,22 @@
+// start .sQuiz
+.sQuiz {
+	--sPT: #{rem(32)};
+	--sPB: #{rem(50)};
+	--sTPB: #{rem(46)};
+	border-bottom: 1px solid $light-blue;
+
+	.section-title{
+		h2{
+
+		}
+	}
+	&__box{
+		min-height: rem(434);
+		box-shadow: 0 rem(19) rem(52) rem(16) rgba(227, 239, 247, 0.75);
+		background-color: $white;
+		border-radius: rem(25);
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sQuiz

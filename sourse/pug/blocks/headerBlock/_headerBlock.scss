@@ -1,12 +1,18 @@
 // start .headerBlock
 .headerBlock {
-	--sPT: #{rem(80)};
-	--sPB: #{rem(90)};
+	--sPT: #{rem(43px)};
+	--sPB: #{rem(51)};
 	--sTPB: #{rem(40)};
+	border-bottom: 1px solid $light-blue;
 
 	&__row{
 		--bs-gutter-x: #{rem(19)};
 		--bs-gutter-y: #{rem(30)};
+	}
+	&__left-col{
+		@include media-breakpoint-up(xl){
+			width: 54.5% !important;
+		}
 	}
 	&__slider-wrap{
 		margin-bottom: rem(40);
@@ -23,20 +29,77 @@
 
 		//
 		.swiper-pagination{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			z-index: 10;
+			bottom: 10px;
+			left: 0;
+			width: 100%;
 
+			//
+			.swiper-pagination-bullet{
+				width: 7px!important;
+				height: 7px!important;
+				margin: 0 1.5px;
+				border-radius: 50%;
+				background-color: $white!important;
+
+				&.swiper-pagination-bullet-active{
+					background-color: $yellow!important;
+				}
+			}
+		}
+
+		//
+		.swiper-next,
+		.swiper-prev{
+			@include mt();
+			position: absolute;
+			z-index: 10;
+			top: 50%;
+			transform: translateY(-50%);
+
+			width: rem(54);
+			padding: rem(3) rem(6);
+
+			display: flex;
+
+			background-color: $white;
+			&:hover{
+				background-color: $gray-100;
+				.icon{
+					color: $black;
+				}
+			}
+			.icon{
+				@include mt();
+				font-size: rem(27);
+				color: $light-blue2;
+			}
+		}
+
+		.swiper-next{
+			border-radius: rem(30) 0 0 rem(30);
+			right: 0;
+			justify-content: flex-start;
+
+		}
+
+		.swiper-prev{
+			border-radius: 0 rem(30) rem(30) 0;
+			left: 0;
+			justify-content: flex-end;
 		}
 	}
 	&__img-link{
 		@extend .accept-ratio-frame;
-		padding-top: (402/614) * 100%;
+		padding-top: 65.7%;
 	}
 	&__video{
-		padding: 8px 105px 8px 27px;
+		padding: rem(5) rem(105) rem(8) rem(25);
 		border-radius: rem(22);
-		@include media-breakpoint-up(xl){
-			padding: 8px 105px 8px 27px;
-			border-radius: rem(22);
-		}
 
 		max-width: calc(100% - 10px);
 		color: $white;
@@ -75,19 +138,41 @@
 	}
 	//r-col
 	&__blue{
-		padding: rem(32);
+		padding: rem(28) rem(18);
+		@include media-breakpoint-up(sm){
+			padding: rem(32) rem(24);
+		}
 		@include media-breakpoint-up(xl){
-			padding: 32px 36px 25px;
+			padding: 24px 35px 25px;
 		}
 
 		background-color: $primary;
 		color: $white;
 		font-weight: 700;
 
-		font-size: rem(39);
+		font-size: rem(28);
+		@include media-breakpoint-up(sm){
+			font-size: rem(32);
+		}
+		@include media-breakpoint-up(xl){
+			font-size: rem(39);
+		}
 		line-height: 1.2;
-		margin-bottom: rem(22);
+		margin-bottom: rem(15);
 	}
+	&__big{
+		display: block;
+
+		font-size: rem(55);
+		line-height: 1.2;
+		@include media-breakpoint-up(xl){
+			font-size: rem(64);
+			line-height: 0.9;
+		}
+		margin-top: -12px;
+		color: $warning;
+	}
+
 	&__delivery{
 		&:before{
 			content: '';
@@ -104,36 +189,45 @@
 		padding-left: rem(17);
 
 		color: $body-color;
-		font-size: rem(41px);
+
+		font-size: rem(28px);
+		@include media-breakpoint-up(sm){
+			font-size: rem(41px);
+		}
 		font-weight: 700;
 		line-height: 1;
 
-		margin-bottom: rem(16);
+		margin-bottom: rem(19);
 	}
 	&__any{
 		background-color: $gray-220;
 
 		color: $body-color;
-		font-size: rem(20px);
+		font-size: rem(18);
+		@include media-breakpoint-up(xl){
+			font-size: rem(20);
+		}
 		line-height: 1.2;
 		font-weight: 700;
-		padding: rem(8) rem(14);
+		padding: rem(5) rem(15);
 		margin-bottom: rem(23);
 		border-radius: rem(20);
 	}
+	//
 	&__v-row{
 		--bs-gutter-x: #{rem(23)};
 		--bs-gutter-y: #{rem(20)};
 
-		padding-bottom: rem(38);
+		padding-bottom: rem(35);
 	}
 	&__v-sub-row{
 		--bs-gutter-x: #{rem(9)};
-		--bs-gutter-y: #{rem(10)};
+		--bs-gutter-y: #{rem(18)};
 	}
 	&__ball{
 		width: rem(47);
 		height: rem(47);
+
 		padding: rem(10);
 		border-radius: 50%;
 		background-color: $primary;
@@ -155,7 +249,9 @@
 	}
 	&__advise-btn{
 		@extend .btn-yellow;
-		min-width: 100%;
+		//min-width: 100%;
+
+		padding: 10px rem(27);
 	}
 
 	//

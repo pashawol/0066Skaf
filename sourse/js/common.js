@@ -340,8 +340,8 @@ function eventHandler() {
 		loop: true,
 
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.swiper-next',
+			prevEl: '.swiper-prev',
 		},
 		pagination: {
 			el: ' .swiper-pagination',
@@ -349,6 +349,36 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+
+	//.sCatalog-slider-js
+	//
+	let sCatalogPrev = document.querySelector('.sCatalog--js .swiper-prev');
+	let sCatalogNext = document.querySelector('.sCatalog--js .swiper-next');
+	let sCatalogSlider = new Swiper('.sCatalog-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+
+		navigation: {
+			nextEl: sCatalogNext,
+			prevEl: sCatalogPrev,
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
+	//fix bugs with resize
+	window.addEventListener('resize', function (){
+		if (sCatalogSlider){
+			window.setTimeout(function (){
+				sCatalogSlider.update();
+			}, 10);
+		}
+	}, {passive: true});
+	//
+
 
 };
 if (document.readyState !== 'loading') {

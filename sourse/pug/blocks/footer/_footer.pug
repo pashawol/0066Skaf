@@ -1,2 +1,26 @@
 mixin footer()
-	footer.footer
+  +b.FOOTER.footer
+    .container
+      +e.row.row.gy-3
+        .col
+          +e.logo(href="/")
+            img(loading="lazy" src="img/@2x/logo-white.png" alt="")
+          +e.logo-txt Продажа корпусных шкафов и шкафов-купе
+          +e.location
+            +e.l-row.row
+              +e.l-icon-col.col-auto
+                +icon('location')
+              .col
+                +e.loc-txt г.Москва, Ленинградское шоссе 80 стр.1 офис
+        .col-auto
+          +e.sub-row.row.align-items-center.gy-3
+            .col-auto
+              +e.tel(href="tel:88007753016") 8 800 775-30-16
+            .col-auto
+              +b.soc-row.row
+                .col-auto
+                  +topNavSoc('wa')
+                .col-auto
+                  +topNavSoc('tg')
+            .col-auto
+              +e.btn(href="#") Перезвоните мне

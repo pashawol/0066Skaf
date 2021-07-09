@@ -1,0 +1,241 @@
+// start .sWhat
+.sWhat {
+	--sPT: #{rem(38)};
+	--sPB: #{rem(57)};
+	--sTPB: #{rem(46)};
+	border-bottom: 1px solid $light-blue;
+
+	.section-title{}
+	&__box{
+		position: relative;
+
+		width: rem(583);
+		max-width: 100%;
+		margin: 0 auto rem(48) auto;
+	}
+	&__img{
+		width: 100%;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+		}
+
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(md){
+			margin-bottom: 0;
+		}
+	}
+	&__items{
+
+	}
+	&__item{
+		position: relative;
+		margin: 0 0 rem(20) 0;
+		@include media-breakpoint-up(md){
+			position: absolute;
+			margin: 0;
+		}
+		color: $body-color;
+		font-size: rem(16);
+		font-weight: 400;
+		line-height: rem(22);
+		padding: 7.5px 20px;
+
+		border-radius: rem(20);
+		background-color: $gray-220;
+
+		display: flex;
+		align-items: center;
+
+		&:before,
+		&:after{
+			width: rem(22);
+			height: rem(22);
+			border-radius: 50%;
+
+			border: 6px solid $yellow;
+			background-color: $white;
+		}
+		&:before{
+			margin-right: 20px;
+		}
+		&:after{
+			margin-left: 20px;
+		}
+
+		//
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3){
+			&:before{
+				content: '';
+			}
+			@include media-breakpoint-up(md){
+				justify-content: flex-end;
+				text-align: right;
+
+				&:before{
+					content: none;
+				}
+				&:after{
+					content: '';
+				}
+			}
+		}
+		//
+		&:nth-child(4),
+		&:nth-child(5),
+		&:nth-child(6){
+			&:before{
+				content: '';
+			}
+		}
+
+		&:nth-child(1){
+			@include media-breakpoint-up(md){
+				top: rem(72);
+
+				right: 215px;
+				width: 447px;
+			}
+			@include media-breakpoint-up(lg){
+				right: 215px;
+				width: 447px;
+			}
+			@include media-breakpoint-up(xl){
+				right: 315px;
+				width: 547px;
+			}
+		}
+
+		&:nth-child(2){
+			@include media-breakpoint-up(md){
+				top: rem(210);
+				right: 240px;
+				width: 335px;
+			}
+			@include media-breakpoint-up(lg){
+				top: rem(210);
+				right: 390px;
+				width: 335px;
+			}
+			@include media-breakpoint-up(xl){
+				right: 490px;
+				width: 335px;
+			}
+		}
+		&:nth-child(3){
+			@include media-breakpoint-up(md){
+				top: rem(379);
+				right: 212px;
+				width: 350px;
+			}
+			@include media-breakpoint-up(lg){
+				top: rem(389);
+				right: 312px;
+				width: 350px;
+			}
+			@include media-breakpoint-up(xl){
+				right: 412px;
+				width: 390px;
+			}
+		}
+		&:nth-child(4){
+			@include media-breakpoint-up(md){
+				top: rem(140);
+				left: 260px;
+				width: 200px;
+			}
+			@include media-breakpoint-up(lg){
+				top: rem(128);
+				left: 428px;
+				width: 200px;
+			}
+			@include media-breakpoint-up(xl){
+				left: 478px;
+				width: 200px;
+			}
+		}
+		&:nth-child(5){
+			@include media-breakpoint-up(md){
+				top: rem(293);
+				left: 243px;
+				width: 343px;
+			}
+			@include media-breakpoint-up(lg){
+				top: rem(257);
+				left: 360px;
+				width: 343px;
+			}
+			@include media-breakpoint-up(xl){
+				left: 460px;
+				width: 343px;
+			}
+		}
+		&:nth-child(6){
+			@include media-breakpoint-up(md){
+				top: rem(470px);
+				left: 254px;
+				width: 360px;
+			}
+			@include media-breakpoint-up(lg){
+				top: rem(396);
+				left: 334px;
+				width: 360px;
+			}
+			@include media-breakpoint-up(xl){
+				left: 434px;
+				width: 360px;
+			}
+		}
+	}
+	//
+	&__i-img{
+		position: absolute;
+		left: calc(100% - 20px);
+		top: 50%;
+		transform: translateY(-50%);
+
+		width: rem(87);
+		height: rem(87);
+		border-radius: 50%;
+		border: 6px solid $white;
+		overflow: hidden;
+		box-shadow: 0 rem(19) rem(52) rem(16) rgba(227, 239, 247, 0.75);
+		background-color: $white;
+	}
+	&__img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	//
+	&__bot{
+		max-width: rem(890);
+		margin: 0 auto;
+	}
+	&__b-txt{
+		margin-bottom: rem(43);
+
+		color: $body-color;
+		font-size: rem(20);
+		@include media-breakpoint-up(sm){
+			font-size: rem(25);
+		}
+		font-weight: 700;
+		line-height: (29.48/25);
+	}
+	&__btn{
+		@extend .btn-yellow;
+		width: rem(330);
+		max-width: 100%;
+
+		padding: rem(13) rem(10);
+	}
+	//
+	&__{}
+	&__{}
+	&__{}
+} // end.sWhat

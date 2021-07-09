@@ -1,0 +1,22 @@
+mixin sFeedBack(data)
+	// start sFeedBack
+	+b.SECTION.sFeedBack.section#sFeedBack&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Отзывы
+				p Мы получили уже более ... отзывов, вот некоторые из них.
+			+e.slider-wrap
+				.swiper-container.sFeedBack-slider-js
+					.swiper-wrapper
+						+sFeedBackSlide()
+						+sFeedBackSlide()
+						+sFeedBackSlide()
+					+arrow()
+			.text-center
+				+e.btn(href="#") Хочу так же
+	// end sFeedBack
+
+mixin sFeedBackSlide()
+	.swiper-slide
+		+e.img(href=`img/@2x/sFeedback-1.png` data-fancybox='sFeedBack')
+			img(loading="lazy" src=`img/@2x/sFeedback-1.png` alt="")

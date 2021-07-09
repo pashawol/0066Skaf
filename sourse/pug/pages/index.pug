@@ -5,6 +5,11 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sQuiz/_sQuiz.pug
 include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sConditions/_sConditions.pug
+include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sMap/_sMap.pug
 
 block variables
 	- let  mainPage= null 
@@ -20,39 +25,10 @@ block pagecontent
 	+headerBlock()
 	+sQuiz()
 	+sCatalog()
-	//+soc()
-	//a(href="#modal-call").link-modal-js фывфывфыв
-	////- img(src="img/", alt="")
-	////- img(src="img/@2x/avif/r.avif", alt="")
-	////- img(src="img/@1x/avif/r.avif", alt="")
-	//+in-c("checkbox", "text")
-	////- +pic('f8af7db0d56028b5cc1c7dfc78ec06e8.jpg')
-	////- img(src="img/r.avif", alt="")
-	//img(src="img/@2x/r.jpg", alt="")
-	//
-	//img(src="img/@2x/webp/r.webp", alt="")
-	////- img(src="img/002-book.avif", alt="")
-	//img(src="img/@2x/002-book.png", alt="")
-	//img(src="img/@2x/webp/002-book.webp", alt="")
-	//
-	//+b.tabs--js
-	//	+e.caption.d-flex
-	//		+e.btn.btn.btn-success.active  btn  2 1
-	//		+e.btn.btn.btn-success btn 2  2
-	//		+e.btn.btn.btn-success btn 2  3
-	//		+e.btn.btn.btn-success btn  2 4
-	//	+e.wrap
-	//		+e.content.active content 1
-	//		+e.content content 2
-	//		+e.content content 3
-	//		+e.content content 4
-	//	+e.wrap
-	//		+e.content.active content 1
-	//		+e.content content 2
-	//		+e.content content 3
-	//		+e.content content 4
-	//+topLine()
-	//+headerBlock()
-	//+sForm()
-	//+sContact()
+	+sWhat()
+	+sVideo()
+	+sForm()
+	+sConditions()
+	+sFeedBack()
+	+sMap()
 	+footer()

@@ -1,0 +1,17 @@
+// start .sMap
+.sMap {
+	&__map{
+		height: rem(400);
+		@include media-breakpoint-up(sm){
+			height: rem(582);
+		}
+		max-height: 800vh;
+		& > ymaps{
+			width: 100% !important;
+			height: 100% !important;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sMap

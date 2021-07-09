@@ -2,8 +2,26 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+			.section-title.d-sm-none.text-center
+				h2 Получите 6 главных советов от эксперта по выбору шкафа прямо сейчас!
+			+e.row.row
+				.col-lg-6.d-none.d-sm-block
+					+e.gray-box
+						+e.g-row.row
+							.col-auto.align-self-end
+								+e.img
+									img(loading="lazy" src="img/@2x/sForm-man.png" alt="")
+							.col
+								+e.H2.title Получите 6 главных советов от эксперта по выбору шкафа прямо сейчас!
+				.col-lg-6
+					+e.blue-box.text-center
+						+e.white-title Оставьте свои данные и мы отправим Вам  файл «6 главных советов по выбору шкафа”
+						+e.inputs
+							+input('Введите Ваше имя', 'text')
+							+input('Введите Ваш телефон', 'tel')
+						+e.btn(type="submit") Получить советы прямо сейчас
+						+e.policy
+							| Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с
+							|
+							a(href="#") Пользовательским соглашением.
 	// end sForm

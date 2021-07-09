@@ -377,7 +377,22 @@ function eventHandler() {
 			}, 10);
 		}
 	}, {passive: true});
+
 	//
+	let sFeedBackSlider = new Swiper('.sFeedBack-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+
+		navigation: {
+			nextEl: '.swiper-next',
+			prevEl: '.swiper-prev',
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
 
 
 };

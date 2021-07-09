@@ -1,29 +1,123 @@
+// start .sForm
+.sForm {
+	--sPT: #{rem(53)};
+	--sPB: #{rem(20)};
+	--sTPB: #{rem(56)};
 
-	// start .sForm
-	.sForm {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	&__row{
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(18)};
+	}
+	&__gray-box{
+		background-color: $gray-220;
 
+		min-height: 100%;
+		display: flex;
+		&:after{
+			content: '';
+			width: rem(21);
+			height: rem(21);
+			position: absolute;
+			top: rem(13);
+			right: rem(15);
+
+			background-image: url(../img/svg/arrow-down-left.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+	}
+	&__g-row{
+		--bs-gutter-x: #{rem(16)};
+		//align-items: flex-end;
+	}
+	&__img-col{
+		align-self: flex-end;
+	}
+	&__img{
+		width: rem(195);
+		height: rem(359);
+
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__title{
+		padding-top: rem(64);
+		padding-right: 10px;
+
+		color: $black;
+		font-size: rem(30);
+		@include media-breakpoint-up(xl){
+			font-size: rem(40);
+		}
+		font-weight: 700;
+		line-height: (38.86/40);
+	}
+	&__blue-box{
+		min-height: 100%;
+		background-color: $primary;
+
+		padding: rem(30) rem(20);
+		@include media-breakpoint-up(xl){
+			padding: rem(33) rem(20) rem(8px);
+		}
+	}
+	&__white-title{
+		max-width: 429px;
+		color: $white;
+		font-size: rem(25);
+		font-weight: 700;
+		line-height: (29.48/25);
+
+		margin: 0 auto rem(31) auto;
+	}
+	//
+	&__inputs{
+		margin: 0 auto rem(28) auto;
+		max-width: rem(335);
+	}
+	&__input-wrap{
+		margin-bottom: rem(10);
+	}
+	&__input{
+		font-size: rem(16);
+		line-height: 1.5;
+		text-align: left;
+
+	}
+	&__btn{
+		@extend .btn-yellow;
+		width: rem(335);
+		max-width: 100%;
+		margin-bottom: rem(15);
+
+		padding: rem(13.5) rem(20);
+	}
+	&__policy{
+		max-width: rem(280);
+		margin: 0 auto;
+
+		color: $blue2;
+		font-size: rem(10);
+		line-height: (13.48/10);
+
+		a{
+			text-decoration: underline;
+			color: $blue2;
+			&:hover{
+				text-decoration: none;
+				color: $white;
+			}
+		}
+	}
+	&__{}
+	&__{}
 } // end.sForm

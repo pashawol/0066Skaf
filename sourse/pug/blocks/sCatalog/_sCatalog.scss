@@ -2,13 +2,19 @@
 .sCatalog {
 	overflow: hidden;
 
-	--sPT: #{rem(32)};
-	--sPB: #{rem(50)};
+	--sPT: #{rem(40)};
+	--sPB: #{rem(62)};
 	--sTPB: #{rem(46)};
+	border-bottom: 1px solid $light-blue;
+	&__container{
+		@media (min-width: 1250px) {
+			padding: 0;
+		}
+	}
 
 	.section-title{
 		h2{
-			margin-bottom: rem(15);
+			margin-bottom: rem(3);
 		}
 		p{
 			color: $body-color;
@@ -24,6 +30,9 @@
 			position: absolute;
 			z-index: 10;
 			top: 50%;
+			//@include media-breakpoint-up(xl){
+			//	top: 52%;
+			//}
 			transform: translateY(-50%);
 
 			display: flex;
@@ -44,9 +53,15 @@
 
 		.swiper-prev{
 			left: calc(#{rem(-27) + rem(-15)});
+			@include media-breakpoint-up(xl){
+				//left: -57px;
+			}
 		}
 		.swiper-next{
 			right: calc(#{rem(-27) + rem(-15)});
+			@include media-breakpoint-up(xl){
+				//right: -57px;
+			}
 		}
 		//
 

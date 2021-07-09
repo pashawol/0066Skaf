@@ -1,0 +1,27 @@
+mixin sWhat(data)
+	// start sWhat
+	+b.SECTION.sWhat.section#sWhat&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Что вы получаете приобретая шкафы у нас
+			+e.box
+				+e.img
+					img(loading="lazy" src="img/@2x/sWhat-img.jpg" alt="")
+				+e.items
+					+sWhatItem('Дсп 16мм. Кроношпан обработан прочными кромками ПВХ')
+					+sWhatItem('Качественная фурнитура и ролики')
+					+sWhatItem('Поставка от 1 дня, оплата при получении')
+					+sWhatItem('Есть все размеры',1)
+					+sWhatItem('Доставка, занос и сборка шкафа дешевле',2)
+					+sWhatItem('Гарантия 5 лет и цена производителя',3)
+			+e.bot.text-center
+				+e.b-txt Кроме того, у нас более 14 критериев качества оценки мебели. Хотите узнать о них больше? Наш специалист поможет Вам сделать правильный выбор!
+				+e.btn(href="#") Получить бесплатную консультацию
+	// end sWhat
+
+mixin sWhatItem(txt, imgNum)
+	+e.item
+		span=txt
+		if imgNum
+			+e.i-img.d-none.d-md-block
+				img(loading="lazy" src=`img/@2x/sWhat-${imgNum}.png` alt="")

@@ -1,0 +1,17 @@
+mixin sVideo(data)
+	// start sVideo
+	+b.SECTION.sVideo.section#sVideo&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2
+					+e.SPAN.big Посмотрите видео от нашего эксперта
+					+e.SPAN.sm какие у нас шкафы и как мы работаем
+			+e.box
+				+e.bg-img.d-none.d-xl-block
+					img(loading="lazy" src='img/@2x/sVideo-cat.png' alt="")
+				+e.video-box(href="https://www.youtube.com/watch?v=en6gms6e54Q&list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video")
+					+e.v-img
+						img(loading="lazy" src="img/@2x/sVideo-bg.jpg" alt="")
+			.text-center
+				+e.btn(href='#') Подобрать свой идеальный шкаф
+	// end sVideo

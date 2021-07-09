@@ -36,10 +36,10 @@ mixin headerBlock()
 mixin headerBlockVantage(imgPass, txt)
 	.col-4
 		+e.v-sub-row.row
-			.col-auto.col-lg-12.col-xl-auto
+			.col-sm-auto.col-lg-12.col-xl-auto
 				+e.ball
 					img(loading="lazy" src=imgPass alt="")
-			.col.col-lg-12.col-xl
+			.col-sm.col-lg-12.col-xl
 				+e.v-txt=txt
 
 mixin headerBlockSlide()

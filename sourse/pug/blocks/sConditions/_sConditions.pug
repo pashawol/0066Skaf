@@ -1,0 +1,32 @@
+mixin sConditions(data)
+	// start sConditions
+	+b.SECTION.sConditions.section#sConditions&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Условия доставки, оплаты и рассрочки
+			+e.box
+				+e.row.row
+					.col-md-auto
+						+e.img
+							img(loading="lazy" src="img/@2x/sConditions.jpg" alt="")
+					.col-md
+						+e.items
+							+e.item
+								| Мы поможем вам с выбором шкафа выбрав подходящий размер. Обсудим когда лучше
+								|
+								br.d-none.d-xl-block
+								| привезти мебель. После этого, с вами свяжется отдел логистики и сделает доставку, занос
+								|
+								br.d-none.d-xl-block
+								| и сборку шкафа.
+							+e.item
+								| Вы получите официальный договор с гарантией на шкаф и фурнитуру до 5 лет. Срок
+								|
+								br.d-none.d-xl-block
+								| эксплуатации шкафов до 30 лет.
+							+e.item
+								| Оплата производится при получении. Если это требуется, мы поможем оформить
+								|
+								br.d-none.d-xl-block
+								| беспроцентную рассрочку и вы сразу можете получить шкаф.
+	// end sConditions

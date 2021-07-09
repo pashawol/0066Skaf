@@ -1,0 +1,110 @@
+// start .sVideo
+.sVideo {
+	--sPT: #{rem(47)};
+	--sPB: #{rem(54)};
+	--sTPB: #{rem(56)};
+	border-bottom: 1px solid $light-blue;
+
+	.section-title{
+		position: relative;
+		z-index: 2;
+		h2{
+			color: $black;
+		}
+		&__big{
+			display: block;
+			font-size: rem(30);
+			@include media-breakpoint-up(md){
+				font-size: rem(40);
+			}
+			line-height: 1;
+			margin-bottom: 11px;
+		}
+		&__sm{
+			display: block;
+			font-size: rem(20);
+			@include media-breakpoint-up(md){
+				font-size: rem(25);
+			}
+			line-height: 1;
+		}
+	}
+	&__box{
+		position: relative;
+		z-index: 1;
+		margin-bottom: rem(56);
+	}
+	&__bg-img{
+		position: absolute;
+		z-index: -1;
+
+		top: rem(-73);
+		right: rem(20);
+
+		width: rem(259);
+		height: rem(262);
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__video-box{
+		display: block;
+		box-shadow: 0 19px 52px 16px rgba(227, 239, 247, 0.75);
+		background-color: $white;
+		border-radius: rem(25);
+
+		padding: rem(34) rem(20);
+		@include media-breakpoint-up(lg){
+			padding: rem(34) rem(40);
+		}
+	}
+	&__v-img{
+		@extend .accept-ratio-frame-nh;
+		padding-top: (596/1058) * 100%;
+
+		&:before{
+			content: '';
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($black, .5);
+		}
+
+		&:after{
+			content: '';
+			position: absolute;
+			z-index: 3;
+			width: rem(87);
+			height: rem(87);
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+
+			@include media-breakpoint-up(xl){
+				top: rem(215);
+				transform: translateX(-50%);
+			}
+
+			//background-image: url(../img/svg/play-ball.svg);
+			background-image: url(../img/@2x/play-ball.png);
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	}
+	&__btn{
+		@extend .btn-yellow;
+		width: rem(335);
+		max-width: 100%;
+		padding: rem(12) rem(16);
+	}
+	//
+	&__{}
+	&__{}
+} // end.sVideo

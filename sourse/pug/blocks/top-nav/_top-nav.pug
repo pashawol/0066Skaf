@@ -18,7 +18,7 @@ mixin top-nav()
 				.col.col-lg-auto
 					+e.tel(href='tel:88007753016') 8 800 775-30-16
 				.col-auto
-					+e.soc-row.row
+					+b.soc-row.row
 						.col-auto
 							+topNavSoc('wa')
 						.col-auto
@@ -29,5 +29,5 @@ mixin top-nav()
 
 mixin topNavSoc(iconName)
 	.col-auto
-		+e.soc(href="#")
+		+e.item(href="#")
 			img(loading="lazy" src=`img/@2x/${iconName}.png` alt='')

@@ -3,17 +3,21 @@
 	width: 100%;
 	position: relative;
 	max-width: rem(500);
-
+	
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
 	}
-
+	
 	.mfp-close {
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
 	}
+}
+
+.modal-win--lg{
+	max-width: rem(960);
 }
 
 a {

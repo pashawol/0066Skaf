@@ -3,7 +3,12 @@
 	@include media-breakpoint-up(lg){
 		padding: rem(50px) 0 rem(150);
 	}
-
+	p{
+		padding-top: rem(20);
+		color: #fff;
+		font-size: rem(20);
+		// max-width: 500px;
+	}
 	background-color: $primary;
 	&__row{
 		--bs-gutter-x: #{rem(10)};
@@ -63,4 +68,14 @@
 	//
 	&__{}
 	&__{}
+}
+
+
+.fancybox__thumbs{
+	display: none !important;
+}
+
+.fancybox__slide{
+	padding-left: 0;
+	padding-right: 0;
 }

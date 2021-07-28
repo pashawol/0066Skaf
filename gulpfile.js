@@ -36,7 +36,7 @@ global.$ = {
     path: {
         tasks: require('./gulp/config/tasks.js'),
     },
-    public: 'public',
+    public: 'wordpress/wp-content/themes/mega/public',
     sourse: 'sourse',
 }
 $.path.tasks.forEach(function (taskPath) {

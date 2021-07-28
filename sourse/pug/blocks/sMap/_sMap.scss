@@ -2,8 +2,10 @@
 .sMap {
 	&__map{
 		height: rem(400);
+		margin: 0 30px;
 		@include media-breakpoint-up(sm){
 			height: rem(582);
+			margin: 0;
 		}
 		max-height: 800vh;
 		& > ymaps{

@@ -213,10 +213,10 @@
 	}
 	//
 	&__bot{
-		max-width: rem(890);
-		margin: 0 auto;
 	}
 	&__b-txt{
+		max-width: rem(890);
+		margin: 0 auto;
 		margin-bottom: rem(43);
 
 		color: $body-color;
@@ -224,6 +224,7 @@
 		@include media-breakpoint-up(sm){
 			font-size: rem(25);
 		}
+		text-align: center;
 		font-weight: 700;
 		line-height: (29.48/25);
 	}
